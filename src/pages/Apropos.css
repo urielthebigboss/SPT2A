@@ -1,0 +1,924 @@
+/* ============ Page A propos ============ */
+.apro-page {
+  overflow: hidden;
+  background: #fff;
+}
+
+.apro-nav,
+.apro-hero,
+.apro-chiffres,
+.apro-bandeau,
+.apro-prod,
+.apro-qualite,
+.apro-engagements,
+.apro-membres {
+  width: min(1180px, 100% - var(--gutter));
+  margin-inline: auto;
+}
+
+.apro-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f5a623;
+}
+
+/* Boutons réutilisés */
+.apro-cta-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  background: var(--green-dark);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(21, 122, 56, 0.35);
+}
+
+.apro-cta-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.apro-cta-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.apro-cta-play-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: #fff;
+}
+
+/* Formes décoratives partagées */
+.shape {
+  display: block;
+  pointer-events: none;
+}
+
+.circle {
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ============ Hero + citation ============ */
+.apro-hero {
+  padding: 40px 0 72px;
+}
+
+.apro-hero-intro h1 {
+  max-width: 420px;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--green-dark);
+}
+
+.apro-hero-intro p {
+  max-width: 420px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.apro-hero-intro .hero-cta {
+  margin-top: 22px;
+}
+
+.apro-hero-bottom {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 56px;
+}
+
+.apro-hero-photo {
+  flex: 1.1;
+  min-height: 320px;
+  background: #eef1ec; /* visible tant que l'image n'est pas fournie */
+  overflow: hidden;
+}
+
+.apro-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.apro-hero-quote {
+  flex: 1;
+  position: relative;
+  margin: 36px 0 -36px -60px;
+  padding: 48px 44px;
+  background: #f6f6f4;
+  box-shadow: var(--shadow-soft);
+}
+
+.apro-hero-quote-icon {
+  display: inline-block;
+  color: #f5a623;
+  transform: scaleX(-1);
+}
+
+.apro-hero-quote p {
+  margin-top: 8px;
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.apro-hero-quote-mark {
+  background: #ffd84d;
+  padding: 0 6px;
+}
+
+.apro-hero-quote cite {
+  display: block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ============ Chiffres / Qui sommes-nous ============ */
+.apro-chiffres {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 88px 0 64px;
+}
+
+.apro-chiffres-left h3,
+.apro-chiffres-right h3 {
+  margin-top: 8px;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--green-dark);
+}
+
+.apro-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 36px;
+  margin: 26px 0 28px;
+}
+
+.apro-stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.apro-stat-label {
+  margin-top: 2px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 150px;
+}
+
+/* Composition décorative centrale */
+.apro-chiffres-shapes {
+  position: relative;
+  width: 240px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.shape-blue {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 120px;
+  height: 76px;
+  border-radius: 18px;
+  background: #2563eb;
+}
+
+.shape-grey {
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  width: 170px;
+  height: 190px;
+  border-radius: 24px;
+  background: #e5e7e3;
+}
+
+.apro-chiffres-tag {
+  position: absolute;
+  bottom: 36px;
+  right: 0;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: var(--green-dark);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  box-shadow: var(--shadow-soft);
+}
+
+.apro-chiffres-right {
+  max-width: 300px;
+}
+
+.apro-chiffres-right p {
+  margin-top: 14px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.apro-chiffres-right p.is-strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ============ Bandeau ============ */
+.apro-bandeau {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 48px 0 88px;
+}
+
+.apro-bandeau-circles {
+  position: relative;
+  width: 220px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.circle-big {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 150px;
+  height: 150px;
+  background: #e5e7e3;
+}
+
+.circle-small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  background: #d4d6d1;
+}
+
+.apro-bandeau-text h3 {
+  font-size: clamp(20px, 2.6vw, 27px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.apro-bandeau-text > p {
+  max-width: 380px;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.apro-bandeau-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+/* ============ Nature & Abondance ============ */
+.apro-nature-banner {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  /* dégradé de secours tant que l'image n'est pas fournie */
+  background: linear-gradient(180deg, #1d3a26 0%, #2e5438 100%);
+}
+
+.apro-nature-banner > img {
+  position: absolute;
+  inset: -14% 0;
+  width: 100%;
+  height: 128%;
+  object-fit: cover;
+}
+
+.apro-nature-shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 24, 14, 0.32);
+}
+
+.apro-nature-banner h3 {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100% - var(--gutter));
+  margin-inline: auto;
+  color: #fff;
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.apro-nature-line {
+  display: block;
+  overflow: hidden;
+}
+
+.apro-nature-line > span {
+  display: inline-block;
+}
+
+.apro-nature-line .is-script {
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.apro-nature-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 56px;
+  width: min(1180px, 100% - var(--gutter));
+  margin-inline: auto;
+  padding: 0 0 88px;
+}
+
+.apro-nature-visual {
+  flex-shrink: 0;
+  width: clamp(260px, 34vw, 400px);
+  margin-top: -90px;
+  padding: 28px;
+  background: #8bc34a;
+  background: linear-gradient(160deg, #9ccc54, #6aa83a);
+  border-radius: 4px;
+}
+
+.apro-nature-visual img {
+  width: 100%;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.25));
+}
+
+.apro-nature-text {
+  padding-top: 48px;
+}
+
+.apro-nature-text p {
+  max-width: 480px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.apro-nature-text p + p {
+  margin-top: 16px;
+}
+
+/* ============ Production ============ */
+.apro-prod {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 32px 0 96px;
+}
+
+.apro-prod-visual {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(280px, 38vw, 460px);
+  height: 380px;
+}
+
+.shape-orange {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 100px;
+  border-radius: 20px;
+  background: #f57c1f;
+}
+
+.shape-black {
+  position: absolute;
+  top: 56px;
+  left: 56px;
+  right: 0;
+  bottom: 60px;
+  border-radius: 16px;
+  background: #0b0b0c;
+}
+
+.apro-prod-minicartes {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  right: -16px;
+  display: flex;
+  gap: 18px;
+}
+
+.apro-prod-minicarte {
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.apro-prod-minicarte h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.apro-prod-minicarte p {
+  margin-top: 5px;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.apro-prod-content h3 {
+  margin: 8px 0 26px;
+  font-size: clamp(20px, 2.6vw, 27px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.apro-prod-etape {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 420px;
+}
+
+.apro-prod-etape + .apro-prod-etape {
+  margin-top: 20px;
+}
+
+.apro-prod-etape-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.apro-prod-etape h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.apro-prod-etape p {
+  margin-top: 4px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ============ Installations ============ */
+.apro-instal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: min(1180px, 100% - var(--gutter));
+  margin-inline: auto;
+  padding: 0 0 96px;
+}
+
+.apro-instal-card {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: clamp(280px, 36vw, 380px);
+  margin-right: -70px;
+  padding: 44px 38px;
+  border-radius: 14px;
+  background: #0b0b0c;
+  color: #fff;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+}
+
+.apro-instal-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.apro-instal-card p {
+  margin: 16px 0 22px;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: #d1d5db;
+}
+
+.apro-instal-image {
+  flex: 1;
+  min-height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #5d8f48, #88b65c); /* secours */
+}
+
+.apro-instal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============ Qualité / Environnement ============ */
+.apro-qualite {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 24px 0 88px;
+}
+
+.circle-grey-light {
+  position: absolute;
+  top: 10px;
+  left: -60px;
+  width: 130px;
+  height: 130px;
+  background: #eceeea;
+}
+
+.apro-qualite-texts {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding-top: 36px;
+}
+
+.apro-qualite-block.is-offset {
+  margin-left: 80px;
+}
+
+.apro-qualite-block h3 {
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--green-dark);
+}
+
+.apro-qualite-block p {
+  max-width: 360px;
+  margin-top: 14px;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.apro-qualite-bambou {
+  flex-shrink: 0;
+  width: clamp(240px, 32vw, 380px);
+  align-self: center;
+}
+
+/* ============ Engagements ============ */
+.apro-engagements {
+  padding: 24px 0 96px;
+  text-align: center;
+}
+
+.apro-engagements h3,
+.apro-membres h3 {
+  margin-top: 6px;
+  font-size: clamp(22px, 2.8vw, 28px);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.apro-engagements-sub,
+.apro-membres-sub {
+  max-width: 420px;
+  margin: 10px auto 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.apro-engagements-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 44px;
+}
+
+.apro-engagement {
+  position: relative;
+  padding: 14px 14px 48px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.apro-engagement figure {
+  margin: 0;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #eef1ec; /* secours */
+}
+
+.apro-engagement figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.apro-engagement h4 {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.apro-engagement p {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.apro-engagement-plus {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f5a623;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ============ Membres ============ */
+.apro-membres {
+  padding: 0 0 110px;
+  text-align: center;
+}
+
+.apro-membres-cards {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 44px;
+}
+
+.apro-membre {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.apro-membre figure {
+  margin: 0;
+  width: 130px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #eef1ec; /* secours */
+  flex-shrink: 0;
+}
+
+.apro-membre figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.apro-membre-infos h4 {
+  max-width: 160px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f5a623;
+  line-height: 1.4;
+}
+
+.apro-membre-infos > p {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.apro-membre-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 900px) {
+  .apro-hero-bottom,
+  .apro-chiffres,
+  .apro-bandeau,
+  .apro-nature-body,
+  .apro-prod,
+  .apro-instal,
+  .apro-qualite,
+  .apro-membres-cards {
+    flex-direction: column;
+  }
+
+  .apro-hero-quote {
+    margin: -30px 16px 0;
+  }
+
+  .apro-chiffres-shapes {
+    margin-inline: auto;
+  }
+
+  .apro-nature-visual {
+    margin-top: -60px;
+    width: min(100%, 360px);
+  }
+
+  .apro-nature-text {
+    padding-top: 0;
+  }
+
+  .apro-prod-visual {
+    width: 100%;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .apro-instal-card {
+    width: 100%;
+    margin: 0 0 -60px;
+  }
+
+  .apro-instal-image {
+    width: 100%;
+  }
+
+  .apro-qualite-block.is-offset {
+    margin-left: 0;
+  }
+
+  .apro-qualite-bambou {
+    margin-inline: auto;
+  }
+
+  .apro-engagements-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .apro-membres-cards {
+    align-items: center;
+    gap: 28px;
+  }
+}
+
+/* ---- Tablette : réduit les grands espacements verticaux ---- */
+@media (max-width: 768px) {
+  .apro-hero {
+    padding: 24px 0 48px;
+  }
+
+  .apro-hero-bottom {
+    margin-top: 32px;
+    gap: 0;
+  }
+
+  .apro-chiffres {
+    gap: 32px;
+    padding: 48px 0 40px;
+  }
+
+  .apro-bandeau {
+    gap: 32px;
+    padding: 32px 0 56px;
+  }
+
+  .apro-nature-banner {
+    min-height: 320px;
+  }
+
+  .apro-nature-body {
+    gap: 32px;
+    padding-bottom: 56px;
+  }
+
+  .apro-prod {
+    gap: 36px;
+    padding: 24px 0 56px;
+  }
+
+  .apro-instal {
+    padding-bottom: 56px;
+  }
+
+  .apro-qualite {
+    gap: 32px;
+    padding: 24px 0 56px;
+  }
+
+  .apro-qualite-texts {
+    gap: 40px;
+    padding-top: 16px;
+  }
+
+  .apro-engagements,
+  .apro-membres {
+    padding-bottom: 56px;
+  }
+}
+
+/* ---- Téléphone ---- */
+@media (max-width: 600px) {
+  .apro-hero-quote {
+    margin: -24px 0 0;
+    padding: 32px 24px;
+  }
+
+  .apro-stats {
+    gap: 18px 24px;
+  }
+
+  .apro-chiffres-right {
+    max-width: none;
+  }
+
+  .apro-bandeau-circles {
+    margin-inline: auto;
+  }
+
+  .apro-instal-card {
+    padding: 32px 26px;
+  }
+
+  .apro-engagements-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .apro-engagement figure {
+    height: 200px;
+  }
+
+  .apro-membre {
+    width: 100%;
+    max-width: 360px;
+  }
+}

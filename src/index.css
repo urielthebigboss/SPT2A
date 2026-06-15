@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --green: #1ea94c;
+  --green-soft: #d9f2e1;
+  --green-dark: #157a38;
+  --ink: #111418;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --blue: #2563eb;
+  --radius-pill: 999px;
+  --shadow-soft: 0 10px 30px rgba(17, 20, 24, 0.08);
+  --shadow-nav: 0 12px 40px rgba(17, 20, 24, 0.1);
+  /* Gouttière latérale des conteneurs : se réduit sur petits écrans */
+  --gutter: 48px;
+
+  font-family: "Quicksand", system-ui, "Segoe UI", sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100svh;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* ============ Gouttières responsives globales ============ */
+@media (max-width: 768px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --gutter: 24px;
+  }
+}

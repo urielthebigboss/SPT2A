@@ -1,0 +1,837 @@
+/* ============ Page Nos activités ============ */
+.acti-page {
+  overflow: hidden;
+  background: #fff;
+}
+
+.acti-nav,
+.acti-hero,
+.acti-excellence,
+.acti-productions-head,
+.acti-aliments,
+.acti-boulangerie,
+.acti-recyclage,
+.acti-finale {
+  width: min(1180px, 100% - var(--gutter));
+  margin-inline: auto;
+}
+
+.acti-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-dark);
+}
+
+.acti-kicker.is-light {
+  color: #bfdbfe;
+}
+
+.acti-kicker.is-warm {
+  color: #b45309;
+}
+
+/* ============ Hero mosaïque ============ */
+.acti-hero {
+  padding: 24px 0 64px;
+  text-align: center;
+}
+
+.acti-hero-mosaic {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 56px;
+  gap: 14px;
+}
+
+.acti-tile {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #e8eae6; /* visible tant que l'image n'est pas fournie */
+}
+
+.acti-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tailles des tuiles du hero (façon maquette : hauteurs variées) */
+.t1 { grid-row: span 2; }
+.t2 { grid-row: span 3; }
+.t3 { grid-row: span 2; margin-top: 28px; }
+.t4 { grid-row: span 3; }
+.t5 { grid-row: span 2; margin-top: 40px; }
+.t6 { grid-row: span 3; }
+.t7 { grid-row: span 2; margin-top: 20px; }
+.t8 { grid-row: span 3; }
+.t9 { grid-row: span 2; grid-column: 2; margin-top: -20px; }
+.t10 { grid-row: span 2; grid-column: 6; margin-top: -34px; }
+
+.acti-hero-text {
+  margin-top: 40px;
+}
+
+.acti-hero-text h1 {
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.acti-hero-text p {
+  max-width: 480px;
+  margin: 12px auto 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ============ Excellence (étapes) ============ */
+.acti-excellence {
+  padding: 32px 0 80px;
+  text-align: center;
+}
+
+.acti-excellence h2 {
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--green-dark);
+}
+
+.acti-excellence-sub {
+  max-width: 460px;
+  margin: 14px auto 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.acti-etapes {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  margin-top: 44px;
+}
+
+.acti-etape-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.acti-etape {
+  position: relative;
+  width: 250px;
+  padding: 28px 22px 24px;
+  border-radius: 18px;
+  background: #f6f7f4;
+  text-align: left;
+}
+
+.acti-etape-num {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #dfe3da;
+}
+
+.acti-etape-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.acti-etape h3 {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.acti-etape p {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.acti-etape-arrow {
+  display: grid;
+  place-items: center;
+  padding: 0 14px;
+  color: var(--green-dark);
+}
+
+/* ============ Productions + banderoles ============ */
+.acti-productions {
+  padding-bottom: 72px;
+}
+
+.acti-productions-head {
+  padding-bottom: 36px;
+}
+
+.acti-productions-head h2 {
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.acti-productions-head p {
+  max-width: 380px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.acti-categorie {
+  margin-top: 28px;
+}
+
+.acti-etiquette {
+  display: inline-block;
+  margin: 0 0 18px 24px;
+  padding: 10px 26px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(17, 20, 24, 0.18);
+}
+
+.acti-etiquette.is-small {
+  display: block;
+  width: fit-content;
+  margin: 28px 24px 14px auto; /* alterné par défaut à droite */
+  font-size: 14px;
+  padding: 8px 22px;
+}
+
+.acti-souscategorie:nth-child(odd) .acti-etiquette.is-small {
+  margin-left: 24px;
+  margin-right: auto;
+}
+
+/* Banderole infinie */
+.acti-bandeau {
+  overflow: hidden;
+  padding: 10px 0;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.acti-bandeau + .acti-bandeau {
+  margin-top: 6px;
+}
+
+.acti-bandeau-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  padding-right: 18px;
+}
+
+.acti-produit {
+  position: relative;
+  flex-shrink: 0;
+  width: 190px;
+  height: 230px;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e8eae6; /* visible tant que l'image n'est pas fournie */
+  box-shadow: var(--shadow-soft);
+}
+
+.acti-produit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.acti-produit figcaption {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+}
+
+.acti-produit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.5));
+}
+
+/* ============ Aliments pour animaux ============ */
+.acti-aliments {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 64px 0;
+}
+
+.acti-aliments-visual {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  width: clamp(300px, 40vw, 480px);
+  min-height: 320px;
+}
+
+.acti-aliments-sac {
+  width: 55%;
+  z-index: 1;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.18));
+}
+
+.acti-aliments-vache {
+  width: 62%;
+  margin-left: -18%;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.18));
+}
+
+.acti-aliments-badge {
+  position: absolute;
+  top: 8px;
+  right: 10%;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: 0 12px 26px rgba(30, 169, 76, 0.4);
+}
+
+.acti-aliments-text h2 {
+  margin-top: 8px;
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--ink);
+}
+
+.acti-aliments-text h2 span {
+  color: var(--green-dark);
+}
+
+.acti-aliments-desc {
+  max-width: 440px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.acti-aliments-atouts {
+  margin-top: 26px;
+}
+
+.acti-atout {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 420px;
+}
+
+.acti-atout + .acti-atout {
+  margin-top: 16px;
+}
+
+.acti-atout-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--green-soft);
+  color: var(--green-dark);
+}
+
+.acti-atout h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.acti-atout p {
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ============ O'Grace ============ */
+.acti-ograce {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-top: 24px;
+  padding: 84px 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0c4a8b 0%, #1d6fc4 55%, #3b9be0 100%);
+  color: #fff;
+}
+
+.acti-ograce-text,
+.acti-ograce-visual {
+  position: relative;
+  z-index: 2;
+}
+
+.acti-ograce-text {
+  flex: 1;
+  padding-left: max(24px, calc((100% - 1180px) / 2));
+}
+
+.acti-ograce-watermark {
+  position: absolute;
+  bottom: -38px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  text-align: center;
+  font-size: clamp(110px, 19vw, 250px);
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.07);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.goutte {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+}
+
+.g1 { width: 22px; height: 22px; top: 16%; left: 12%; }
+.g2 { width: 14px; height: 14px; top: 64%; left: 26%; }
+.g3 { width: 30px; height: 30px; top: 24%; right: 32%; }
+.g4 { width: 12px; height: 12px; top: 70%; right: 16%; }
+.g5 { width: 18px; height: 18px; top: 10%; right: 8%; }
+
+.acti-ograce h2 {
+  margin-top: 8px;
+  font-size: clamp(44px, 6vw, 68px);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.acti-ograce-desc {
+  max-width: 420px;
+  margin-top: 14px;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #e0ecfa;
+}
+
+.acti-ograce-qualites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.acti-ograce-qualites li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.acti-ograce-visual {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(220px, 26vw, 320px);
+  margin-right: max(24px, calc((100% - 1180px) / 2));
+  display: grid;
+  place-items: center;
+}
+
+.acti-ograce-visual img {
+  width: 70%;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 26px 40px rgba(0, 0, 0, 0.35));
+}
+
+.acti-ograce-halo {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 70%);
+}
+
+/* ============ Boulangerie ============ */
+.acti-boulangerie {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 84px 0;
+}
+
+.acti-boulangerie-text {
+  flex: 1;
+}
+
+.acti-boulangerie h2 {
+  margin-top: 8px;
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 700;
+  line-height: 1.22;
+  color: #7c3a12;
+}
+
+.acti-boulangerie-desc {
+  max-width: 440px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.acti-boulangerie-promesses {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.acti-boulangerie-promesses li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.acti-boulangerie-promesses li + li {
+  margin-top: 12px;
+}
+
+.acti-boulangerie-promesses li span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #fdead2;
+  color: #b45309;
+}
+
+.acti-boulangerie-photos {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.acti-pain {
+  width: clamp(130px, 15vw, 190px);
+  aspect-ratio: 3 / 4;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f3e7d3; /* visible tant que l'image n'est pas fournie */
+  box-shadow: 0 18px 40px rgba(124, 58, 18, 0.18);
+}
+
+.acti-pain img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.acti-pain.p2 {
+  margin: -24px -22px 0;
+  z-index: 1;
+  width: clamp(150px, 17vw, 210px);
+}
+
+/* ============ Recyclage ============ */
+.acti-recyclage {
+  padding: 24px 0 88px;
+  text-align: center;
+}
+
+.acti-recyclage-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green-dark);
+}
+
+.acti-recyclage h2 {
+  margin-top: 18px;
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.acti-recyclage-sub {
+  max-width: 470px;
+  margin: 14px auto 0;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.acti-cycle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.acti-cycle-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.acti-cycle-step {
+  width: 220px;
+  padding: 26px 20px;
+  border-radius: 18px;
+  background: #f6f7f4;
+}
+
+.acti-cycle-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.acti-cycle-step h4 {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.acti-cycle-step p {
+  margin-top: 5px;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.acti-cycle-arrow {
+  padding: 0 12px;
+  color: var(--green-dark);
+}
+
+/* ============ Finale ============ */
+.acti-finale {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-bottom: 110px;
+}
+
+.acti-finale-text {
+  flex-shrink: 0;
+}
+
+.acti-finale-text h2 {
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--green-dark);
+}
+
+.acti-finale-text .hero-cta {
+  margin-top: 22px;
+}
+
+.acti-finale-mosaic {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 52px;
+  gap: 12px;
+}
+
+.f1 { grid-row: span 2; }
+.f2 { grid-row: span 3; }
+.f3 { grid-row: span 2; margin-top: 22px; }
+.f4 { grid-row: span 3; }
+.f5 { grid-row: span 3; }
+.f6 { grid-row: span 2; }
+.f7 { grid-row: span 3; margin-top: -20px; }
+.f8 { grid-row: span 2; }
+
+/* ============ Responsive ============ */
+@media (max-width: 900px) {
+  .acti-hero-mosaic {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .t9, .t10 {
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  .acti-etapes,
+  .acti-cycle {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .acti-etape-wrap,
+  .acti-cycle-wrap {
+    flex-direction: column;
+  }
+
+  .acti-etape-arrow,
+  .acti-cycle-arrow {
+    transform: rotate(90deg);
+    padding: 10px 0;
+  }
+
+  .acti-aliments,
+  .acti-ograce,
+  .acti-boulangerie,
+  .acti-finale {
+    flex-direction: column;
+  }
+
+  .acti-ograce-text,
+  .acti-ograce-visual {
+    padding: 0 24px;
+    margin: 0;
+  }
+
+  .acti-aliments-visual {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .acti-etiquette.is-small {
+    margin-inline: 24px auto;
+  }
+
+  .acti-finale-mosaic {
+    width: 100%;
+  }
+}
+
+/* ---- Tablette : réduit les grands espacements ---- */
+@media (max-width: 768px) {
+  .acti-aliments,
+  .acti-boulangerie {
+    gap: 36px;
+    padding: 48px 0;
+  }
+
+  .acti-ograce {
+    gap: 36px;
+    padding: 56px 0;
+  }
+
+  .acti-finale {
+    gap: 36px;
+    padding-bottom: 64px;
+  }
+
+  .acti-etiquette {
+    margin-left: 0;
+  }
+}
+
+/* ---- Téléphone ---- */
+@media (max-width: 600px) {
+  .acti-hero {
+    padding: 16px 0 48px;
+  }
+
+  .acti-hero-mosaic {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 48px;
+    gap: 10px;
+  }
+
+  .acti-hero-text {
+    margin-top: 28px;
+  }
+
+  .acti-etape,
+  .acti-cycle-step {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .acti-produit {
+    width: 150px;
+    height: 190px;
+  }
+
+  .acti-aliments-visual {
+    min-height: 240px;
+  }
+
+  .acti-aliments-text h2,
+  .acti-boulangerie h2 {
+    margin-top: 16px;
+  }
+
+  .acti-boulangerie-photos {
+    justify-content: center;
+  }
+
+  .acti-finale-mosaic {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 46px;
+  }
+}
+
+/* ---- Petit téléphone ---- */
+@media (max-width: 400px) {
+  .acti-hero-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .acti-etiquette {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
