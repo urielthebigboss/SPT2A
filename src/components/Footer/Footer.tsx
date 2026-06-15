@@ -75,7 +75,7 @@ export default function Footer() {
             whileHover={{ rotate: -8, scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img src="/logo.jpeg" alt="Logo SPT2A" />
+            <img src="/logo1.jpeg" alt="Logo SPT2A" />
           </motion.a>
 
           <motion.div className="footer-socials" variants={stagger}>

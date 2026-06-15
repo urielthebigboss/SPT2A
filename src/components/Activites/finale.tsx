@@ -2,17 +2,26 @@ import { motion, type Variants } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import f1 from "../../assets/images/Alatoire/11.jpg";
+import f2 from "../../assets/images/Alatoire/12.jpg";
+import f3 from "../../assets/images/Alatoire/13.jpg";
+import f4 from "../../assets/images/Alatoire/14.jpg";
+import f5 from "../../assets/images/Alatoire/15.jpg";
+import f6 from "../../assets/images/Alatoire/16.jpg";
+import f7 from "../../assets/images/Alatoire/17.jpg";
+import f8 from "../../assets/images/Alatoire/18.jpg";
+
 /* ====== Vos images locales : remplacez ces chemins ======
    La mosaïque de clôture : 8 photos fortes de vos activités. */
 const tiles = [
-  { src: "/images/activites/finale-1.jpg", className: "f1" },
-  { src: "/images/activites/finale-2.jpg", className: "f2" },
-  { src: "/images/activites/finale-3.jpg", className: "f3" },
-  { src: "/images/activites/finale-4.jpg", className: "f4" },
-  { src: "/images/activites/finale-5.jpg", className: "f5" },
-  { src: "/images/activites/finale-6.jpg", className: "f6" },
-  { src: "/images/activites/finale-7.jpg", className: "f7" },
-  { src: "/images/activites/finale-8.jpg", className: "f8" },
+  { src: f1, className: "f1" },
+  { src: f2, className: "f2" },
+  { src: f3, className: "f3" },
+  { src: f4, className: "f4" },
+  { src: f5, className: "f5" },
+  { src: f6, className: "f6" },
+  { src: f7, className: "f7" },
+  { src: f8, className: "f8" },
 ];
 /* ========================================================= */
 

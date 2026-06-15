@@ -56,7 +56,7 @@ export default function Formulaire() {
             poursuivre votre voyage
           </h2>
           <motion.img
-            src="/logo.jpeg"
+            src="/logo1.jpeg"
             alt="Logo SPT2A"
             animate={{ rotate: [0, 6, -6, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}

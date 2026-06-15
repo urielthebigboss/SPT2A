@@ -16,6 +16,7 @@ export default function Navbar() {
 
   // Ferme le menu mobile à chaque changement de page
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOpen(false);
   }, [pathname]);
 
@@ -32,7 +33,7 @@ export default function Navbar() {
         whileTap={{ scale: 0.95 }}
       >
         <Link to="/">
-          <img src="/logo.jpeg" alt="Logo SPT2A" />
+          <img src="/logo1.jpeg" alt="Logo SPT2A" />
         </Link>
       </motion.span>
 
@@ -44,7 +45,11 @@ export default function Navbar() {
         aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
       >
-        {open ? <X size={22} strokeWidth={2.2} /> : <Menu size={22} strokeWidth={2.2} />}
+        {open ? (
+          <X size={22} strokeWidth={2.2} />
+        ) : (
+          <Menu size={22} strokeWidth={2.2} />
+        )}
       </button>
 
       <motion.nav
