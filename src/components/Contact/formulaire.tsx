@@ -2,11 +2,11 @@ import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import { SendHorizontal } from "lucide-react";
 import { SocialIcon } from "react-social-icons";
-import image from "../../assets/images/Contact/contactferme.jpg";
+import img from "../../assets/images/contact/contactferme.jpg";
 /* ====== Vos coordonnées et image locale : remplacez ====== */
 const CONTACT_EMAIL = "contact@spt2a.com";
 
-const fermeImage = image;
+const fermeImage = img;
 
 const socials = [
   `mailto:${CONTACT_EMAIL}`,
