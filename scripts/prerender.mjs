@@ -13,6 +13,29 @@ import puppeteer from "puppeteer";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, "..", "dist");
 
+// Sur Vercel / Lambda, le Chrome de Puppeteer ne démarre pas (libs système
+// manquantes). On utilise alors @sparticuz/chromium, conçu pour le serverless.
+// En local, on garde le Chrome embarqué par Puppeteer.
+const IS_SERVERLESS =
+  !!process.env.VERCEL ||
+  !!process.env.AWS_LAMBDA_FUNCTION_NAME ||
+  !!process.env.AWS_REGION;
+
+async function launchBrowser() {
+  if (IS_SERVERLESS) {
+    const chromium = (await import("@sparticuz/chromium")).default;
+    return puppeteer.launch({
+      args: [...chromium.args, "--no-sandbox", "--disable-setuid-sandbox"],
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
+  }
+  return puppeteer.launch({
+    headless: "new",
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
+}
+
 // Doit correspondre aux <Route> de src/App.tsx
 const ROUTES = ["/", "/sante", "/apropos", "/contact", "/activites"];
 const PORT = 4185;
@@ -46,11 +69,8 @@ async function main() {
   try {
     await waitForServer(ORIGIN);
 
-    // 2) Navigateur headless
-    browser = await puppeteer.launch({
-      headless: "new",
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    });
+    // 2) Navigateur headless (serverless sur Vercel, local sinon)
+    browser = await launchBrowser();
 
     for (const route of ROUTES) {
       const page = await browser.newPage();
@@ -79,6 +99,11 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("Échec du pré-rendu :", err);
-  process.exit(1);
+  // Non-bloquant : même si le pré-rendu échoue, le site se déploie quand même
+  // (l'index.html statique contient déjà le SEO essentiel : titre, meta, JSON-LD).
+  console.warn(
+    "⚠️  Pré-rendu ignoré, le déploiement continue. Raison :",
+    err?.message || err
+  );
+  process.exit(0);
 });
