@@ -8,9 +8,16 @@ import OGrace from "../components/Activites/ograce";
 import Boulangerie from "../components/Activites/boulangerie";
 import Recyclage from "../components/Activites/recyclage";
 import Finale from "../components/Activites/finale";
+import { useSeo } from "../seo/useSeo";
 import "./Activites.css";
 
 export default function Activites() {
+  useSeo({
+    title: "Nos activités — SPT2A | Production & Transformation Agricole",
+    description:
+      "Découvrez les activités de SPT2A : productions, aliments, boulangerie, recyclage et démarche d'excellence. Notre savoir-faire au quotidien.",
+    path: "/activites",
+  });
   return (
     <>
       <div className="acti-page">

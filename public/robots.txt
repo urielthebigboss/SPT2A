@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# ⚠️ Remplace par ton vrai domaine
+Sitemap: https://www.spt2a.com/sitemap.xml

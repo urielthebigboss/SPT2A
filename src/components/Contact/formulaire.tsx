@@ -10,7 +10,7 @@ const fermeImage = img;
 
 const socials = [
   `mailto:${CONTACT_EMAIL}`,
-  "https://linkedin.com/company/spt2a",
+  "https://linkedin.com/company/spt2a-société-de-production-de-transformation-agricole-et-animale",
   "https://instagram.com/spt2a",
   "https://tiktok.com/@spt2a",
   "https://facebook.com/spt2a",

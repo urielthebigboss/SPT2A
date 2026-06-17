@@ -1,11 +1,178 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>frontend</title>
+    <!-- ============================================================= -->
+    <!--  SEO  —  ⚠️ REMPLACE LES VALEURS "À_REMPLIR" PAR LES TIENNES   -->
+    <!-- ============================================================= -->
+
+    <!-- Titre affiché dans l'onglet ET dans Google (60 car. max) -->
+    <title>SPT2A — Société de Production et de Transformation Agricole</title>
+
+    <!-- Texte affiché sous ton nom dans les résultats Google (155 car. max) -->
+    <meta
+      name="description"
+      content="SPT2A, Société de Production et de Transformation Agricole — entreprise familiale fondée par la famille DAKAUD. Production, transformation, qualité. Contact et localisation."
+    />
+
+    <!-- Mots-clés / auteur -->
+    <meta name="author" content="DAKAUD" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- URL canonique (évite le contenu dupliqué) -->
+    <link rel="canonical" href="https://www.spt2a.com/s" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- ===== Open Graph (Facebook, WhatsApp, LinkedIn) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta
+      property="og:site_name"
+      content="SPT2A — Société de Production et de Transformation Agricole"
+    />
+    <meta
+      property="og:title"
+      content="SPT2A — Société de Production et de Transformation Agricole"
+    />
+    <meta
+      property="og:description"
+      content="Entreprise familiale de production et de transformation agricole, fondée par Uriel Jean Bedel DAKAUD."
+    />
+    <meta property="og:url" content="https://www.spt2a.com/" />
+    <!-- ⚠️ Mets une vraie photo (équipe / logo) en 1200x630px -->
+    <meta property="og:image" content="https://www.spt2a.com/logo.png" />
+    <meta
+      property="og:image:alt"
+      content="SPT2A — Société de Production et de Transformation Agricole"
+    />
+
+    <!-- ===== Twitter / X ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="SPT2A — Société de Production et de Transformation Agricole"
+    />
+    <meta
+      name="twitter:description"
+      content="Entreprise familiale de production et de transformation agricole, fondée par Uriel Jean Bedel DAKAUD."
+    />
+    <meta name="twitter:image" content="https://www.spt2a.com/logo.png" />
+
+    <!-- ============================================================= -->
+    <!--  GRAPHE D'ENTITÉS Schema.org                                  -->
+    <!--  Relie : Entreprise  ↔  Toi  ↔  Membres  ↔  Réseaux          -->
+    <!--  C'est ce que Google ET les IA lisent pour te "reconnaître".  -->
+    <!--  Les @id relient les entités entre elles (ne pas les changer  -->
+    <!--  au hasard) ; remplace surtout les noms, URLs et liens sociaux.-->
+    <!-- ============================================================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.spt2a.com/#website",
+            "url": "https://www.spt2a.com/",
+            "name": "SPT2A",
+            "inLanguage": "fr-FR",
+            "publisher": {
+              "@id": "https://www.spt2a.com/#organization"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.spt2a.com/#organization",
+            "name": "SPT2A",
+            "legalName": "Société de Production et de Transformation Agricole",
+            "alternateName": "SPT2A",
+            "url": "https://www.spt2a.com/",
+            "logo": "https://www.spt2a.com/logo.png",
+            "image": "https://www.spt2a.com/logo.png",
+            "description": "SPT2A — Société de Production et de Transformation Agricole. Entreprise familiale de production et de transformation agricole : cultures, transformation, qualité et savoir-faire.",
+            "knowsAbout": [
+              "Production agricole",
+              "Transformation agroalimentaire",
+              "Agriculture durable"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Agboville",
+              "addressLocality": "Agboville",
+              "postalCode": "À_REMPLIR_CP",
+              "addressCountry": "CI"
+            },
+            "email": "À_REMPLIR_EMAIL",
+            "telephone": "+225 0143333233",
+            "member": [
+              {
+                "@id": "https://www.spt2a.com/#person-uriel-jean-bedel-DAKAUD"
+              }
+            ],
+            "hasMap": "https://share.google/MNWyWk9ikLBGVSkTH",
+            "sameAs": [
+              "https://share.google/MNWyWk9ikLBGVSkTH",
+              "https://www.linkedin.com/company/spt2a-société-de-production-de-transformation-agricole-et-animale",
+              "https://www.instagram.com/À_REMPLIR_ENTREPRISE",
+              "https://www.facebook.com/À_REMPLIR_ENTREPRISE",
+              "https://www.wikidata.org/wiki/Q140264425"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.spt2a.com/#person-uriel",
+            "name": "Uriel Jean Bedel DAKAUD",
+            "givenName": "Uriel Jean Bedel",
+            "familyName": "DAKAUD",
+            "url": "https://www.spt2a.com/apropos",
+            "image": "https://www.spt2a.com/logo.png",
+            "jobTitle": "DRH / Ingénieur IT/ Directeur de la Production Agricole et Animale / Directeur de la mécanisation",
+            "worksFor": { "@id": "https://www.spt2a.com/#organization" },
+            "memberOf": { "@id": "https://www.spt2a.com/#organization" },
+            "sibling": [
+              { "@id": "https://www.spt2a.com/#person-soeur-1" },
+              { "@id": "https://www.spt2a.com/#person-soeur-2" }
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in//dakaud-uriel-jean-bedel-194788375/",
+              "https://www.instagram.com/urielbeydel/",
+              "https://www.tiktok.com/@urielbeydel",
+              "https://www.wikidata.org/wiki/Q140264496"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.ton-domaine.com/#person-soeur-1",
+            "name": "À_REMPLIR_PRENOM DAKAUD",
+            "familyName": "DAKAUD",
+            "jobTitle": "À_REMPLIR_ROLE",
+            "memberOf": { "@id": "https://www.ton-domaine.com/#organization" },
+            "sibling": { "@id": "https://www.ton-domaine.com/#person-uriel" },
+            "sameAs": [
+              "https://www.instagram.com/À_REMPLIR",
+              "https://www.linkedin.com/in/À_REMPLIR"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.ton-domaine.com/#person-soeur-2",
+            "name": "À_REMPLIR_PRENOM DAKAUD",
+            "familyName": "DAKAUD",
+            "jobTitle": "À_REMPLIR_ROLE",
+            "memberOf": { "@id": "https://www.ton-domaine.com/#organization" },
+            "sibling": { "@id": "https://www.ton-domaine.com/#person-uriel" },
+            "sameAs": [
+              "https://www.instagram.com/À_REMPLIR",
+              "https://www.linkedin.com/in/À_REMPLIR"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

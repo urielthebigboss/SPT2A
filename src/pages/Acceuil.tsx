@@ -3,9 +3,16 @@ import Contenu from "../components/Acceuil/contenu";
 import Partenaire from "../components/Acceuil/partenaire";
 import SonVache from "../components/Acceuil/son";
 import Footer from "../components/Footer/Footer";
+import { useSeo } from "../seo/useSeo";
 import "./Acceuil.css";
 
 export default function Accueil() {
+  useSeo({
+    title: "SPT2A — Société de Production et de Transformation Agricole",
+    description:
+      "SPT2A, entreprise de production et de transformation agricole. Activités, démarche, partenaires, contact et localisation.",
+    path: "/",
+  });
   return (
     <>
       <div className="accueil">
