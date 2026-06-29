@@ -1,10 +1,10 @@
 import { motion, type Variants } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import { SocialIcon } from "react-social-icons";
-import Uriel from "../../assets/images/propos/Uriel.png";
+//import { ArrowUpRight } from "lucide-react";
+//import { SocialIcon } from "react-social-icons";
+//import Uriel from "../../assets/images/propos/Uriel.png";
 
 // ⚠️ Doit correspondre au domaine utilisé dans index.html et useSeo.ts
-const SITE = "https://www.spt2a.com";
+//const SITE = "https://www.spt2a.com";
 
 /* ============================================================= *
  *  SOURCE UNIQUE des membres.                                   *
@@ -13,10 +13,11 @@ const SITE = "https://www.spt2a.com";
  *  - id : doit matcher les @id du graphe dans index.html        *
  *  - relation : lien dans l'entreprise familiale                *
  * ============================================================= */
-const membres = [
+{
+  /*const membres = [
   {
     id: "person-uriel-jean-bedel-DAKAUD",
-    src: Uriel,
+    //src: Uriel,
     name: "Uriel Jean Bedel DAKAUD",
     role: "DRH ",
     seconde_role: "Directeur de la Poduction Agricole et Animale",
@@ -28,12 +29,14 @@ const membres = [
       "https://www.tiktok.com/@urielbeydel",
     ],
   },
-];
+];*/
+}
 /* ========================================================= */
 
 // Données structurées générées depuis la liste ci-dessus.
 // Chaque membre est relié à l'entreprise SPT2A, avec sa photo (image SEO).
-const membersJsonLd = {
+{
+  /* const membersJsonLd = {
   "@context": "https://schema.org",
   "@graph": membres.map((m) => ({
     "@type": "Person",
@@ -45,7 +48,8 @@ const membersJsonLd = {
     memberOf: { "@id": `${SITE}/#organization` },
     sameAs: m.socials.filter((s) => !s.includes("À_REMPLIR")),
   })),
-};
+};*/
+}
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -65,11 +69,11 @@ export default function Membres() {
       viewport={{ once: true, amount: 0.25 }}
       variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
     >
-      {/* Données structurées (lues par Google et les IA) */}
+      {/* Données structurées (lues par Google et les IA)
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(membersJsonLd) }}
-      />
+      />*/}
 
       <motion.p className="apro-kicker" variants={fadeUp}>
         Notre structure
@@ -79,7 +83,7 @@ export default function Membres() {
         Les femmes et les hommes qui portent le projet SPT2A au quotidien.
       </motion.p>
 
-      <div className="apro-membres-cards">
+      {/* <div className="apro-membres-cards">
         {membres.map(({ src, name, role, seconde_role, link, socials }, i) => (
           <motion.article
             key={i}
@@ -127,7 +131,7 @@ export default function Membres() {
             </div>
           </motion.article>
         ))}
-      </div>
+      </div>*/}
     </motion.section>
   );
 }
