@@ -21,7 +21,7 @@ export default function Membres() {
       <motion.p className="apro-kicker" variants={fadeUp}>
         Notre structure
       </motion.p>
-      <motion.h3 variants={fadeUp}>Notre équipe</motion.h3>
+      <motion.h3 variants={fadeUp}>Notre équipe.</motion.h3>
       <motion.p className="apro-membres-sub" variants={fadeUp}>
         Les femmes et les hommes qui portent le projet SPT2A au quotidien.
       </motion.p>
