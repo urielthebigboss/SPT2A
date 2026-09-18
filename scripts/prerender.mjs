@@ -37,7 +37,15 @@ async function launchBrowser() {
 }
 
 // Doit correspondre aux <Route> de src/App.tsx
-const ROUTES = ["/", "/sante", "/apropos", "/contact", "/activites"];
+const ROUTES = [
+  "/",
+  "/sante",
+  "/apropos",
+  "/contact",
+  "/activites",
+  "/investir",
+  "/confidentialite",
+];
 const PORT = 4185;
 const ORIGIN = `http://localhost:${PORT}`;
 

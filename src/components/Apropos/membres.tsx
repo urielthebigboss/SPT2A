@@ -28,3 +28,4 @@ export default function Membres() {
     </motion.section>
   );
 }
+

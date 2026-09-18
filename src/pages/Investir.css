@@ -1,0 +1,486 @@
+/* ============ Page Investir ============ */
+.inv-page {
+  overflow: hidden;
+  background: #fff;
+}
+
+.inv-nav,
+.inv-hero,
+.inv-steps,
+.inv-animaux,
+.inv-gestion,
+.inv-avantages,
+.inv-final {
+  width: min(1180px, 100% - var(--gutter));
+  margin-inline: auto;
+}
+
+.inv-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f5a623;
+}
+
+.inv-section-head {
+  max-width: 620px;
+}
+
+.inv-section-head h2 {
+  margin-top: 10px;
+  font-size: clamp(26px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--green-dark);
+}
+
+.inv-section-head p {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ---- Boutons ---- */
+.inv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.inv-btn-primary {
+  background: var(--green-dark);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(21, 122, 56, 0.35);
+}
+
+.inv-btn-ghost {
+  background: #fff;
+  color: var(--green-dark);
+  border: 1.5px solid var(--green-soft);
+}
+
+.inv-btn-icon {
+  display: inline-flex;
+}
+
+/* ============ Hero ============ */
+.inv-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 56px;
+  padding: 48px 0 72px;
+}
+
+.inv-hero-title {
+  font-size: clamp(32px, 4.4vw, 52px);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--green-dark);
+}
+
+.inv-hero-title span {
+  background: #ffd84d;
+  padding: 0 8px;
+  color: var(--ink);
+}
+
+.inv-hero-lead {
+  max-width: 480px;
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.inv-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.inv-hero-visual {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 440px;
+  background: linear-gradient(160deg, #6e9c52, #44702f);
+  box-shadow: var(--shadow-soft);
+}
+
+.inv-hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inv-hero-badge {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.inv-hero-badge span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.inv-hero-badge small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.inv-hero-badge-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  flex-shrink: 0;
+}
+
+/* ============ Étapes : comment ça marche ============ */
+.inv-steps {
+  padding: 40px 0 24px;
+}
+
+.inv-steps-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-top: 44px;
+}
+
+.inv-step {
+  position: relative;
+  padding: 26px 20px 24px;
+  border-radius: 18px;
+  background: #f6f7f4;
+  text-align: left;
+}
+
+.inv-step-num {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eef1ec;
+  color: #f5a623;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.inv-step-icon {
+  margin-top: 18px;
+  color: #f5a623;
+}
+
+.inv-step h3 {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.inv-step p {
+  margin-top: 6px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ============ Animaux ============ */
+.inv-animaux {
+  padding: 64px 0 40px;
+}
+
+.inv-animaux-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.inv-animal {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.inv-animal-photo {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background: #eef1ec;
+}
+
+.inv-animal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inv-animal-body {
+  padding: 16px 18px 20px;
+  text-align: left;
+}
+
+.inv-animal-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.inv-animal-body p {
+  margin-top: 6px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ============ Nous gérons pour vous ============ */
+.inv-gestion {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 56px;
+  padding: 64px 0;
+}
+
+.inv-gestion-visual {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 420px;
+  background: #eef1ec;
+  box-shadow: var(--shadow-soft);
+}
+
+.inv-gestion-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inv-gestion-quote {
+  margin-top: 16px;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.inv-gestion-quote span {
+  color: var(--green-dark);
+}
+
+.inv-gestion-list {
+  margin-top: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.inv-gestion-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.inv-gestion-item-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  flex-shrink: 0;
+}
+
+.inv-gestion-item h3 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.inv-gestion-item p {
+  margin-top: 2px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* ============ Pourquoi investir ============ */
+.inv-avantages {
+  padding: 40px 0 72px;
+}
+
+.inv-avantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.inv-avantage {
+  padding: 26px 24px;
+  border-radius: 18px;
+  background: #f6f7f4;
+  text-align: left;
+}
+
+.inv-avantage-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--green-dark);
+  box-shadow: var(--shadow-soft);
+}
+
+.inv-avantage h3 {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.inv-avantage p {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+/* ============ CTA final ============ */
+.inv-final {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  margin-bottom: 80px;
+  padding: 72px 40px;
+  text-align: center;
+  color: #fff;
+  isolation: isolate;
+}
+
+.inv-final img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.inv-final::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    160deg,
+    rgba(21, 122, 56, 0.86),
+    rgba(17, 20, 24, 0.78)
+  );
+}
+
+.inv-final h2 {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.inv-final p {
+  max-width: 520px;
+  margin: 16px auto 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.inv-final .inv-hero-ctas {
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.inv-final .inv-btn-ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 980px) {
+  .inv-animaux-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .inv-steps-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .inv-hero,
+  .inv-gestion {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .inv-hero {
+    padding: 32px 0 48px;
+  }
+  .inv-hero-visual {
+    min-height: 340px;
+    order: -1;
+  }
+  .inv-avantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .inv-animaux-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .inv-steps-track,
+  .inv-avantages-grid {
+    grid-template-columns: 1fr;
+  }
+  .inv-hero-ctas .inv-btn {
+    flex: 1;
+    justify-content: center;
+  }
+  .inv-final {
+    padding: 56px 24px;
+  }
+}

@@ -61,7 +61,7 @@ export default function Hero() {
           className="apro-hero-photo"
           initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
           whileInView={{ opacity: 1, clipPath: "inset(0 0% 0 0)" }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: "some" }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
           <img src={heroImage} alt="Héritage agricole de la Côte d'Ivoire" />

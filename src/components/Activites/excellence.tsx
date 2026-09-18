@@ -43,7 +43,7 @@ export default function Excellence() {
         pour nourrir le monde
       </motion.h2>
       <motion.p className="acti-excellence-sub" variants={fadeUp}>
-        Une seule et même maison maîtrise tout le parcours de vos aliments —
+        Une seule et même maison maîtrise tout le parcours de vos aliments,
         c'est ce qui fait la différence dans votre assiette.
       </motion.p>
 

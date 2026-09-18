@@ -45,7 +45,7 @@ export default function Boulangerie() {
           sorti du four chaque matin
         </motion.h2>
         <motion.p className="acti-boulangerie-desc" variants={fadeUp}>
-          Du blé au fournil, il n'y a qu'un pas — et c'est chez nous qu'il se
+          Du blé au fournil, il n'y a qu'un pas et c'est chez nous qu'il se
           fait. Notre boulangerie pétrit et cuit chaque jour des pains généreux,
           avec les farines issues de nos cultures.
         </motion.p>

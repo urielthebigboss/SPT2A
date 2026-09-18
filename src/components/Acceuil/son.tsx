@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Volume2, VolumeX } from "lucide-react";
 
 /* ====== Votre fichier audio : déposez le son de vache ici ====== */
 const SON_VACHE = "/sounds/vache.mp3"; // public/sounds/vache.mp3
@@ -60,26 +59,15 @@ export default function SonVache() {
         type="button"
         className="son-vache"
         onClick={basculer}
-        aria-label={actif ? "Couper le son de la ferme" : "Activer le son de la ferme"}
+        aria-label={
+          actif ? "Couper le son de la ferme" : "Activer le son de la ferme"
+        }
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, type: "spring", stiffness: 140, damping: 16 }}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
       >
-        <motion.span
-          className="son-vache-icon"
-          animate={actif ? { rotate: [0, -10, 10, 0] } : { rotate: 0 }}
-          transition={
-            actif
-              ? { duration: 2.4, repeat: Infinity, ease: "easeInOut" }
-              : undefined
-          }
-        >
-          {actif ? <Volume2 size={15} strokeWidth={2.4} /> : <VolumeX size={15} strokeWidth={2.4} />}
-        </motion.span>
-        {actif ? "Son de la ferme" : "Activer le son"}
-
         {/* Petites barres d'égaliseur quand le son joue */}
         {actif && (
           <span className="son-vache-eq" aria-hidden>

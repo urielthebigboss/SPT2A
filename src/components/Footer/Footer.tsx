@@ -32,6 +32,8 @@ const navLinks = [
   { label: "Nos Activités", href: "/activites" },
   { label: "Santé & Nutrition", href: "/sante" },
   { label: "Nous Contacter", href: "/contact" },
+  { label: "Programme d'Investissement", href: "/investir" },
+  { label: "Politique de confidentialité", href: "/confidentialite" },
 ];
 
 const fadeUp: Variants = {
@@ -222,11 +224,11 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            La société de Production
+            Société de Production
             <br />
-            et de Transformation
+            de Transformation
             <br />
-            agricole.
+            Agricole et Animale.
           </motion.p>
         </div>
       </div>

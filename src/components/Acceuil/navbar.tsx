@@ -1,13 +1,23 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Layers, Heart, Plus, ArrowUpRight, Menu, X } from "lucide-react";
+import {
+  Home,
+  Layers,
+  Heart,
+  Plus,
+  ArrowUpRight,
+  Menu,
+  X,
+  HandCoins,
+} from "lucide-react";
 
 const links = [
   { href: "/", label: "Accueil", icon: Home },
   { href: "/activites", label: "Nos activités", icon: Layers },
   { href: "/sante", label: "Santé & Nutrition", icon: Heart },
   { href: "/apropos", label: "A propos", icon: Plus },
+  { href: "/investir", label: "Investir", icon: HandCoins },
 ];
 
 export default function Navbar() {

@@ -141,16 +141,14 @@ export default function Formulaire() {
       <motion.div
         className="contact-form-image"
         initial={{ opacity: 0, clipPath: "inset(0 0 0 100%)" }}
-        whileInView={{ opacity: 1, clipPath: "inset(0 0 0 0%)" }}
-        viewport={{ once: true, amount: 0.3 }}
+        animate={{ opacity: 1, clipPath: "inset(0 0 0 0%)" }}
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.img
           src={fermeImage}
           alt="Vue aérienne de la ferme SPT2A"
           initial={{ scale: 1.15 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
+          animate={{ scale: 1 }}
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
         />
       </motion.div>

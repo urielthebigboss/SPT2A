@@ -4,6 +4,8 @@ import SanteNutrition from "./pages/Snate&Nutrition";
 import Apropos from "./pages/Apropos";
 import Contact from "./pages/Contact";
 import Activites from "./pages/Activites";
+import Investir from "./pages/Investir";
+import Confidentialite from "./pages/Confidentialite";
 import "./App.css";
 
 export default function App() {
@@ -15,6 +17,8 @@ export default function App() {
         <Route path="/apropos" element={<Apropos />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/activites" element={<Activites />} />
+        <Route path="/investir" element={<Investir />} />
+        <Route path="/confidentialite" element={<Confidentialite />} />
       </Routes>
     </Router>
   );
